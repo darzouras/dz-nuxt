@@ -95,8 +95,8 @@ collections:
             name: 'List'
             widget: object
             fields:
-              - label: Type
-                name: type
+              - label: List Style
+                name: liststyle
                 widget: select
                 summary: List
                 options: ['Bullet', 'Numbered']
