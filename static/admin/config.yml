@@ -99,8 +99,8 @@ collections:
                 name: type
                 widget: select
                 summary: List
-                options: ['Unordered', 'Ordered']
-                default: 'Unordered'
+                options: ['Bullet', 'Numbered']
+                default: 'Bullet'
               - label: List
                 name: list
                 widget: list
