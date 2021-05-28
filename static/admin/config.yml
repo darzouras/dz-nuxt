@@ -98,9 +98,11 @@ collections:
               - label: Type
                 name: type
                 widget: select
+                summary: List
+                default: 'unord'
                 options:
-                  - { label: 'Unordered', value: 'unordered' }
-                  - { label: 'Ordered', value: 'ordered' }
+                  - { label: 'Unordered', value: 'unord' }
+                  - { label: 'Ordered', value: 'ord' }
               - label: List
                 name: list
                 widget: list
@@ -108,6 +110,7 @@ collections:
           - label: 'Image'
             name: 'Image'
             widget: object
+            summary: Image
             fields:
               - label: Images
                 name: images
