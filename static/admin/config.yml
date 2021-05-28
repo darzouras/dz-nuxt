@@ -99,8 +99,8 @@ collections:
                 name: type
                 widget: select
                 options:
-                  - { label: 'Unordered', value: 'ul' }
-                  - { label: 'Ordered', value: 'ol' }
+                  - { label: 'Unordered', value: 'unordered' }
+                  - { label: 'Ordered', value: 'ordered' }
               - label: List
                 name: list
                 widget: list
