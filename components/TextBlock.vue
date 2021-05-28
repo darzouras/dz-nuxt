@@ -1,7 +1,7 @@
 <template>
-    <component :is="`h${data.level}`">
+    <p>
         {{ data.text }}
-    </component>
+    </p>
 </template>
 
 <script>

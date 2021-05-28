@@ -1,12 +1,17 @@
 <template>
   <div>
-    <h2>{{ page.title }}</h2>
+    <h1>{{ page.title }}</h1>
     <nuxt-content :document="page" />
+
+    <component v-for="(block, index) in page.blocks" :key="index" :is="block.type" v-bind:data="block" />
   </div>
 </template>
 
 <script>
+import * as components from '../components'
+
 export default {
+  components,
   async asyncData({ $content, params, error }) {
     let page;
     try {
