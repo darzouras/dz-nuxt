@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
+
+@font-face {
+    font-family: 'FantasqueSansMono';
+    src: url(../fonts/FantasqueSansMono-Regular.woff2) format('woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'FantasqueSansMono';
+    src: url(../fonts/FantasqueSansMono-Italic.woff2) format('woff2');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FantasqueSansMono';
+    src: url(../fonts/FantasqueSansMono-Bold.woff2) format('woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'FantasqueSansMono';
+    src: url(../fonts/FantasqueSansMono-BoldItalic.woff2) format('woff2');
+    font-weight: 700;
+    font-style: italic;
+}
+
 @tailwind utilities;
