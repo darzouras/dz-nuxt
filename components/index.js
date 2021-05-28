@@ -1,1 +1,5 @@
 // export { default as Component } from './Component.vue'
+export { default as Header } from './Header.vue'
+export { default as TextBlock } from './TextBlock.vue'
+export { default as List } from './List.vue'
+export { default as ImageBlock } from './ImageBlock.vue'

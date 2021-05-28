@@ -63,9 +63,6 @@ collections:
       - label: "Summary"
         name: "summary"
         widget: "text"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
       - label: 'Blocks'
         name: 'blocks'
         widget: 'list'
@@ -84,7 +81,7 @@ collections:
                 options: ['2', '3', '4']
                 default: '2'
           - label: 'Text'
-            name: 'Text'
+            name: 'TextBlock'
             widget: object
             summary: '{{fields.text}}'
             fields:
@@ -106,7 +103,7 @@ collections:
                 widget: list
                 field: { label: "List item", name: "item", widget: text }
           - label: 'Image'
-            name: 'Image'
+            name: 'ImageBlock'
             widget: object
             summary: Image
             fields:

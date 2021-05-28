@@ -5,7 +5,7 @@ blocks:
   - type: Header
     level: "2"
     text: A level two heading
-  - type: Text
+  - type: TextBlock
     text: Text block!
   - type: Header
     level: "3"
@@ -16,7 +16,5 @@ blocks:
       - This is a list thing!
       - list item 2
       - Third list item
-  - type: Image
+  - type: ImageBlock
     image: /uploads/jigglypuff1.JPG
----
-:) oops the body is required
