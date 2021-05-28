@@ -99,10 +99,8 @@ collections:
                 name: type
                 widget: select
                 summary: List
-                default: 'unord'
-                options:
-                  - { label: 'Unordered', value: 'unord' }
-                  - { label: 'Ordered', value: 'ord' }
+                options: ['Unordered', 'Ordered']
+                default: 'Unordered'
               - label: List
                 name: list
                 widget: list
