@@ -66,8 +66,8 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
-      - label: 'Sections'
-        name: 'sections'
+      - label: 'Blocks'
+        name: 'blocks'
         widget: 'list'
         types:
           - label: 'Header'
@@ -82,7 +82,7 @@ collections:
                 name: level
                 widget: select
                 options: ['2', '3', '4']
-                default: '2' }
+                default: '2'
           - label: 'Text'
             name: 'Text'
             widget: object
