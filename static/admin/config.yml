@@ -70,13 +70,45 @@ collections:
         name: 'sections'
         widget: 'list'
         types:
-          - label: 'Carousel'
-            name: 'carousel'
+          - label: 'Header'
+            name: 'Header'
             widget: object
-            summary: '{{fields.header}}'
+            summary: '{{fields.text}}'
             fields:
-              - { label: Header, name: header, widget: string, default: 'Image Gallery' }
-              - { label: Template, name: template, widget: string, default: 'carousel.html' }
+              - label: Text
+                name: text
+                widget: string
+              - label: Level
+                name: level
+                widget: select
+                options: ['2', '3', '4']
+                default: '2' }
+          - label: 'Text'
+            name: 'Text'
+            widget: object
+            summary: '{{fields.text}}'
+            fields:
+              - label: Text
+                name: text
+                widget: text
+          - label: 'List'
+            name: 'List'
+            widget: object
+            fields:
+              - label: Type
+                name: type
+                widget: select
+                options:
+                  - { label: 'Unordered', value: 'ul' }
+                  - { label: 'Ordered', value: 'ol' }
+              - label: List
+                name: list
+                widget: list
+                field: { label: "List item", name: "item", widget: text }
+          - label: 'Image'
+            name: 'Image'
+            widget: object
+            fields:
               - label: Images
                 name: images
                 widget: list
