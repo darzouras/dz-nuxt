@@ -110,10 +110,9 @@ collections:
             widget: object
             summary: Image
             fields:
-              - label: Images
-                name: images
-                widget: list
-                field: { label: Image, name: image, widget: image }
+              - label: Image
+                name: image
+                widget: image
   - name: "blog"
     label: "Blog"
     folder: "content/posts"
