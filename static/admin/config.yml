@@ -3,20 +3,141 @@ backend:
   repo: darzouras/dz-nuxt
   branch: main # Branch to update (optional; defaults to master)
 
-media_folder: static/img
-public_folder: /img
+media_folder: "static/uploads"
+public_folder: "/uploads"
+site_url: https://www.darzouras.com
 
 collections:
-  - name: 'blog'
-    label: 'Blog'
-    folder: 'content/blog'
-    format: 'frontmatter'
+  - name: "special"
+    label: "Special"
+    create: false
+    files:
+      - label: "Blog"
+        name: "blog"
+        file: "content/blog.md"
+        fields:
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Summary"
+          name: "summary"
+          widget: "text"
+        - label: "Body"
+          name: "body"
+          widget: "markdown"
+      - label: "Home"
+        name: "home"
+        file: "content/home.md"
+        fields:
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Summary"
+          name: "summary"
+          widget: "text"
+        - label: "Body"
+          name: "body"
+          widget: "markdown"
+      - label: "Contact"
+        name: "contact"
+        file: "content/contact.md"
+        fields:
+        - label: "Title"
+          name: "title"
+          widget: "string"
+        - label: "Summary"
+          name: "summary"
+          widget: "text"
+        - label: "Body"
+          name: "body"
+          widget: "markdown"
+  - name: "pages"
+    label: "Page"
+    folder: "content/pages"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    editor:
-      preview: false
+    slug: "{{slug}}"
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+      - label: 'Blocks'
+        name: 'blocks'
+        widget: 'list'
+        types:
+          - label: 'Header'
+            name: 'Header'
+            widget: object
+            summary: '{{fields.text}}'
+            fields:
+              - label: Text
+                name: text
+                widget: string
+              - label: Level
+                name: level
+                widget: select
+                options: ['2', '3', '4']
+                default: '2'
+          - label: 'Text'
+            name: 'Text'
+            widget: object
+            summary: '{{fields.text}}'
+            fields:
+              - label: Text
+                name: text
+                widget: text
+          - label: 'List'
+            name: 'List'
+            widget: object
+            fields:
+              - label: List Style
+                name: liststyle
+                widget: select
+                summary: List
+                options: ['Bullet', 'Numbered']
+                default: 'Bullet'
+              - label: List
+                name: list
+                widget: list
+                field: { label: "List item", name: "item", widget: text }
+          - label: 'Image'
+            name: 'Image'
+            widget: object
+            summary: Image
+            fields:
+              - label: Image
+                name: image
+                widget: image
+  - name: "blog"
+    label: "Blog"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Summary"
+        name: "summary"
+        widget: "text"
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        default: ["work"]
+        required: true
+      - label: "Image"
+        name: "header"
+        widget: "image"
+        default: ""
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

@@ -7,7 +7,9 @@
     "start": "nuxt start"
   },
   "dependencies": {
-    "nuxt": "^2.15.6"
+    "@nuxt/content": "^1.14.0",
+    "nuxt": "^2.15.6",
+    "remixicon": "^2.5.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.1.2",
