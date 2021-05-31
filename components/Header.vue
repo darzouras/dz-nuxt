@@ -15,7 +15,7 @@ export default {
     },
     data() {
         return {
-            styleClasses: "text-purple-50 mb-4"
+            styleClasses: "text-purple-50 mb-4 md:mb-8"
         }
     },
     computed: {

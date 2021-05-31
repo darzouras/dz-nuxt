@@ -1,5 +1,5 @@
 <template>
-    <div class="image-wrapper w-full my-8">
+    <div class="image-wrapper w-full my-8 md:my-16">
         <img :src="data.image">
     </div>
 </template>
