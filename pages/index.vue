@@ -1,8 +1,25 @@
 <template>
   <div>
-    <h1 class="font-bold">Hello world</h1>
-    <p>test</p>
-
-    <NuxtLink to="/blocks-test">Test</NuxtLink>
+    <nuxt-content :document="page" />
   </div>
 </template>
+
+<script>
+import * as components from '../components'
+
+export default {
+  components,
+  async asyncData({ $content, error }) {
+    let page;
+    try {
+      page = await $content("home").fetch();
+    } catch (e) {
+      error({ message: "Page not found" });
+    }
+
+    return {
+      page,
+    };
+  },
+};
+</script>

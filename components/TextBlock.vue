@@ -1,5 +1,5 @@
 <template>
-    <p>
+    <p class="mb-4">
         {{ data.text }}
     </p>
 </template>
