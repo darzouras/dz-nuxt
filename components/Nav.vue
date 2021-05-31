@@ -1,8 +1,7 @@
 <template>
     <nav class="border-2 border-purple-100 p-1 md:mr-4">
-        {{ pages }}
         <ul>
-            <li v-for="page in pages" :key="page.slug">
+            <li v-for="page in navlist" :key="page.slug">
                 <NuxtLink :to="page.slug">{{ page.title }}</NuxtLink>
             </li>
         </ul>
@@ -11,10 +10,13 @@
 
 <script>
 export default {
-    props: {
-        pages: {
-            Array
+    data() {
+        return {
+            navlist: []
         }
+    },
+    async fetch() {
+        this.navlist = await this.$content("pages").fetch()
     }
 };
 </script>
