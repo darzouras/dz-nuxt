@@ -4,12 +4,18 @@ permalink: now
 layout: layouts/Default.vue
 summary: What have I been up to?
 header: /uploads/delores1.jpg
+blocks:
+    - type: TextBlock
+      text: |
+        What have I been up to? And [what is a now page](https://nownownow.com/about)?
+    - type: Header
+      level: "2"
+      text: Personally
+    - type: TextBlock
+      text: |
+        Lately I'm playing guitar (poorly), catching up on anime, and playing games. I try to exercise daily as well to try to balance the fantastic vegan baked goods that my husband makes. Recently bought a sewing machine because I had a big patch to sew to my jacket- might have to take up quilting now that it's here.
 ---
-What have I been up to? And [what is a now page](https://nownownow.com/about)?
 
-## Personally
-
-Lately I'm playing guitar (poorly), catching up on anime, and playing games. I try to exercise daily as well to try to balance the fantastic vegan baked goods that my husband makes. Recently bought a sewing machine because I had a big patch to sew to my jacket- might have to take up quilting now that it's here.
 
 ## Professionally
 

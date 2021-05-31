@@ -1,5 +1,5 @@
 <template>
-    <div class="font-sans w-full min-h-screen bg-white color-purple-50">
+    <div class="font-sans w-full min-h-screen bg-white text-purple-100">
         <div class="w-11/12 md:w-10/12 py-5 md:py-10 mx-auto md:flex md:flex-wrap md:justify-between md:align-top lg:justify-center">
             <header class="md:w-1/5 z-1">
                 <Nav />

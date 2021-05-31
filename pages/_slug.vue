@@ -1,9 +1,10 @@
 <template>
   <div>
     <Header :data="{ level: '1', text: page.title }" />
-    <nuxt-content :document="page" />
 
     <component v-for="(block, index) in page.blocks" :key="index" :is="block.type" v-bind:data="block" />
+
+    <nuxt-content :document="page" />
   </div>
 </template>
 
